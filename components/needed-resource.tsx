@@ -6,7 +6,7 @@ function NeededResource({ list }: { list: MaterialDataProps[] }) {
     <table className="w-full text-sm">
       <thead className="bg-third">
         <tr
-          className="grid p-4 text-xs font-semibold text-neutral-04 space-x-2"
+          className="grid p-2 xl:p-4 text-xs font-semibold text-neutral-04 space-x-2 items-center"
           style={{ gridTemplateColumns: "0.5fr 3fr 1fr 1fr" }}
         >
           <th className="text-center">STT</th>
@@ -20,7 +20,7 @@ function NeededResource({ list }: { list: MaterialDataProps[] }) {
           list.map((item, index) => (
             <tr
               key={index}
-              className="border-t grid p-4 text-sm font-semibold text-neutral-07 items-center space-x-2"
+              className="border-t grid p-2 xl:p-4 text-xs xl:text-sm font-semibold text-neutral-07 items-center space-x-2"
               style={{ gridTemplateColumns: "0.5fr 3fr 1fr 1fr" }}
             >
               <td className="text-center">{index + 1}</td>
@@ -34,10 +34,10 @@ function NeededResource({ list }: { list: MaterialDataProps[] }) {
                   />
                   <div className="flex flex-col gap-1">
                     <p>{item.name}</p>
-                    <p className="text-xs font-normal text-neutral-003">
+                    <p className="text-[10px] xl:text-xs font-normal text-neutral-003">
                       (none)
                     </p>
-                    <p className="text-xs font-normal text-01">
+                    <p className="text-[10px] xl:text-xs font-normal text-01">
                       {item.unit === "Cuộn" ? "NVL_000014" : "NVL_000024"}
                     </p>
                   </div>
@@ -49,8 +49,10 @@ function NeededResource({ list }: { list: MaterialDataProps[] }) {
           ))
         ) : (
           <div className="flex flex-col items-center justify-center gap-3 mt-8">
-            <Image src={"/empty.png"} alt="Empty" width={250} height={250} />
-            <p className="text-2xl font-medium text-neutral-04">
+            <div className="w-[200px] xl:w-[250px] h-auto">
+              <Image src={"/empty.png"} alt="Empty" width={250} height={250} />
+            </div>
+            <p className="text-lg xl:text-2xl font-medium text-neutral-04">
               Chưa có dữ liệu
             </p>
           </div>

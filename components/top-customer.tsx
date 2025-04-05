@@ -19,11 +19,11 @@ const chartConfig = {
 
 export function TopCustomer({ list }: { list: TopCustomerProps[] }) {
   return (
-    <div className="p-6 relative">
-      <p className="absolute top-4 left-22 text-xs text-neutral-03">
+    <div className="px-4 py-6 xl:p-6 relative">
+      <p className="absolute top-3 left-20 xl:top-4 xl:left-22 text-xs text-neutral-03">
         Khách hàng
       </p>
-      <p className="absolute bottom-7 left-26 text-xs text-neutral-03">
+      <p className="absolute bottom-[30px] xl:bottom-7 left-24 xl:left-26 text-xs text-neutral-03">
         Mặt hàng
       </p>
       <ChartContainer config={chartConfig}>

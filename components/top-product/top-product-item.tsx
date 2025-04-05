@@ -6,8 +6,10 @@ function TopProductItem({ item }: { item?: TopProductProps }) {
     <div className="shadow-md rounded-2xl p-6 flex flex-col">
       <div className="flex items-start justify-between">
         <div className="flex flex-col">
-          <p className="font-bold text-3xl text-light-blue">{item?.buy || 0}</p>
-          <p className="font-normal text-sm text-title">
+          <p className="font-bold text-2xl xl:text-3xl text-light-blue">
+            {item?.buy || 0}
+          </p>
+          <p className="font-normal text-xs xl:text-sm text-title">
             {item?.product || "Chưa có mặt hàng"}
           </p>
         </div>

@@ -23,7 +23,7 @@ const chartConfig = {
 
 export function ManufacturePlan({ list }: { list: ProductionDataProps[] }) {
   return (
-    <div className="px-6 relative mt-6">
+    <div className="px-4 xl:px-6 relative mt-6">
       <p className="absolute -top-8 left-10 text-xs text-neutral-03">Đơn vị</p>
       <p className="absolute bottom-0 left-6 text-xs text-neutral-03">
         Mặt hàng
@@ -31,11 +31,11 @@ export function ManufacturePlan({ list }: { list: ProductionDataProps[] }) {
       <div className="flex gap-4 items-center absolute -top-8 right-6">
         <div className="flex gap-2 items-center">
           <div className="w-6 h-3 rounded-2xl bg-light-blue" />
-          <p className="text-sm font-medium">Kế hoạch</p>
+          <p className="text-xs xl:text-sm font-medium">Kế hoạch</p>
         </div>
         <div className="flex gap-2 items-center">
           <div className="w-6 h-3 rounded-2xl bg-green-01" />
-          <p className="text-sm font-medium">Thực hiện</p>
+          <p className="text-xs xl:text-sm font-medium">Thực hiện</p>
         </div>
       </div>
       <ChartContainer config={chartConfig}>

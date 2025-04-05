@@ -42,17 +42,19 @@ export function ManufactureSituation({
   }, [list]);
 
   return (
-    <div className="flex flex-col w-full px-6">
+    <div className="flex flex-col w-full px-4 xl:px-6">
       <div className="flex-1">
         <ChartContainer
           config={chartConfig}
           className="mx-auto aspect-square max-h-[400px]"
         >
           <PieChart>
-            {list.length > 0 &&<ChartTooltip
-              cursor={false}
-              content={<ChartTooltipContent hideLabel />}
-            />}
+            {list.length > 0 && (
+              <ChartTooltip
+                cursor={false}
+                content={<ChartTooltipContent hideLabel />}
+              />
+            )}
             <Pie
               data={displayList}
               dataKey="value"
@@ -94,24 +96,24 @@ export function ManufactureSituation({
         </ChartContainer>
       </div>
       {list.length > 0 ? (
-        <div className="flex items-center justify-between gap-2">
+        <div className="flex items-stretch justify-between gap-2">
           {list.map((item) => (
             <div
               key={item.name}
               className="flex flex-col gap-1 p-2 border rounded-xl w-1/3"
             >
               <p
-                className={`font-semibold text-2xl`}
+                className={`font-semibold text-lg xl:text-2xl`}
                 style={{ color: item.fill }}
               >
                 {item.value.toLocaleString()}
               </p>
-              <p className="text-sm font-normal">{item.name}</p>
+              <p className="text-xs xl:text-sm font-normal">{item.name}</p>
             </div>
           ))}
         </div>
       ) : (
-        <div className="flex items-center justify-between gap-2">
+        <div className="flex items-stretch justify-between gap-2">
           <div className="flex flex-col gap-1 p-2 border rounded-xl w-1/3">
             <p
               className={`font-semibold text-2xl`}
